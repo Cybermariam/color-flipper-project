@@ -4,16 +4,14 @@ const btn = document.getElementById('btn');
 const color = document.querySelector('.color');
 
 btn.addEventListener('click', function () {
-    let hexValue = '#';
-
+    let hexColor = '#';
     for (let i = 0; i < 6; i++) {
-        hexValue += hex[getRandomNumber()];
-        console.log(hexValue);
+        hexColor += hex[getRandomNumber()];
     }
-    document.body.style.backgroundColor = hexValue;
-    color.textContent = hexValue;
-});
 
+    document.body.style.backgroundColor = hexColor;
+    color.textContent = hexColor;
+});
 function getRandomNumber() {
     return Math.floor(Math.random() * hex.length);
 }
